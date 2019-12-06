@@ -1,50 +1,33 @@
+Unhandled exception in thread started by <function wrapper at 0x7fdd705a2398>
 Performing system checks...
 
-System check identified no issues (0 silenced).
-December 05, 2019 - 23:42:51
-Django version 1.11.26, using settings 'tizza.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-Performing system checks...
-
-System check identified no issues (0 silenced).
-December 05, 2019 - 23:45:06
-Django version 1.11.26, using settings 'tizza.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-Performing system checks...
-
-System check identified no issues (0 silenced).
-December 05, 2019 - 23:45:09
-Django version 1.11.26, using settings 'tizza.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-Unhandled exception in thread started by <function wrapper at 0x7f816c273578>
 Traceback (most recent call last):
   File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper
     fn(*args, **kwargs)
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
-    autoreload.raise_last_exception()
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 251, in raise_last_exception
-    six.reraise(*_exception)
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper
-    fn(*args, **kwargs)
-  File "/home/nariadmin/Django/local/liUnhandled exception in thread started by <function wrapper at 0x7f2e6f723578>
-Traceback (most recent call last):
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper
-    fn(*args, **kwargs)
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
-    autoreload.raise_last_exception()
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 251, in raise_last_exception
-    six.reraise(*_exception)
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper
-    fn(*args, **kwargs)
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/__init__.py", line 27, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/apps/registry.py", line 85, in populate
-    app_config = AppConfig.create(entry)
-  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/apps/config.py", line 120, in create
-    mod = import_module(mod_path)
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 124, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 256, in check
+    for pattern in self.url_patterns:
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 407, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/nariadmin/Django/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 400, in urlconf_module
+    return import_module(self.urlconf_name)
   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
     __import__(name)
-ImportError: No module named tdjango.contrib
+  File "/home/nariadmin/Django/tizza/tizza/urls.py", line 18, in <module>
+    from django.urls import include, path
+ImportError: cannot import name include
