@@ -12,6 +12,6 @@ def index(request, pid):
             'id': pizza.id,
             'title': pizza.title,
             'description': pizza.description,
-        }
-    )
+            }
+            )
 # Create your views here.
